@@ -1,0 +1,60 @@
+SELECT * FROM `SALARIOS` WHERE PROFISSÃO = 'PROFISSIONAL DE TI' 
+#######################################################################################################
+SELECT * FROM `SALARIOS` WHERE PROFISSÃO LIKE 'P%' --------(somente as que começam com 'P')----------
+-- WHERE PROFISSÃO = 'PROFISSIONAL DE TI'
+#############################################################################################################
+SELECT NOME, PROFISSÃO, SALÁRIO AS VERDINHA --------(O 'AS' serve para trocar o nome da coluna na hora da consulta)----------
+FROM `SALARIOS` 
+WHERE PROFISSÃO LIKE 'P%'
+-- WHERE PROFISSÃO = 'PROFISSIONAL DE TI'
+#################################################################################################################
+SELECT COUNT(NOME) AS QTD_PROFESSORES --------------('COUNT' serve para listar a quantidade que tem de determinada profissão)-------------------------
+FROM SALARIOS 
+WHERE PROFISSÃO = 'PROFESSOR'
+###############################################################################################################
+SELECT SUM(SALÁRIO) AS SLR_PROFESSORES -------------('SUM' serve para somar)----------------
+FROM SALARIOS 
+WHERE PROFISSÃO = 'PROFESSOR'
+###############################################################################################################
+SELECT * FROM SALARIOS 
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI'
+AND NOME IN ('GABRIEL BARBOSA' , 'HUGO ROMODA')
+***************************************************************************************************************
+SELECT AVG(SALÁRIO) AS MEDIA -------('AVG' serve para calcular a media)--------
+FROM SALARIOS 
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI'
+AND NOME IN ('GABRIEL BARBOSA' , 'HUGO ROMODA')
+#################################################################################################################
+SELECT MAX(SALÁRIO) AS Maior_Salário_    ------('MAX' mostra o maior valor)------
+FROM SALARIOS 
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI'
+AND NOME IN ('GABRIEL BARBOSA' , 'HUGO ROMODA')
+#################################################################################################################
+SELECT MAX(SALÁRIO) AS Maior_Salário_  -----('MIN' mostra o menor valor)-----
+FROM SALARIOS 
+WHERE PROFISSÃO = 'PROFISSIONAL DE TI'
+AND NOME IN ('GABRIEL BARBOSA' , 'HUGO ROMODA')
+##################################################################################################################
+SELECT MAX(SALÁRIO) AS Maior_Salário_ 
+FROM SALARIOS 
+WHERE PROFISSÃO = 'ATOR'
+*******************************************************************
+SELECT MIN(SALÁRIO) AS Maior_Salário_ 
+FROM SALARIOS 
+WHERE PROFISSÃO = 'ATOR'
+##################################################################################################################
+SELECT MAX(SALÁRIO) AS Maior_Salário_ 
+FROM SALARIOS 
+WHERE PROFISSÃO = 'MUSICO'
+********************************************************************
+SELECT MIN(SALÁRIO) AS Maior_Salário_ 
+FROM SALARIOS 
+WHERE PROFISSÃO = 'MUSICO'
+##################################################################################################################
+SELECT MAX(SALÁRIO) AS Maior_Salário_ 
+FROM SALARIOS 
+WHERE PROFISSÃO IN ('ATOR' , 'PROFESSOR') ----(Comparando os valores)----
+##################################################################################################################
+SELECT MAX(SALÁRIO) AS Maior_Salário_ 
+FROM SALARIOS 
+WHERE PROFISSÃO IN ('ATOR' , 'PROFESSOR' , 'ATRIZ')
