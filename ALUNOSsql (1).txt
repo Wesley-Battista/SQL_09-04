@@ -1,0 +1,57 @@
+SELECT AVG(Idade) FROM `Pessoas`; 
+16.8750
+
+SELECT SUM(Idade) FROM `Pessoas`
+540
+
+ALTER TABLE Pessoas ADD SEXO VARCHAR(255)
+UPDATE Pessoas
+SET SEXO = CASE
+    WHEN PessoasID = 1 THEN 'M'
+    WHEN PessoasID = 2 THEN 'F'
+    WHEN PessoasID = 3 THEN 'F'
+    WHEN PessoasID = 4 THEN 'F'
+    WHEN PessoasID = 5 THEN 'F'
+    WHEN PessoasID = 6 THEN 'F' 
+    WHEN PessoasID = 7 THEN 'M'
+    WHEN PessoasID = 8 THEN 'F'
+    WHEN PessoasID = 9 THEN 'F'
+    WHEN PessoasID = 10 THEN 'M'
+    WHEN PessoasID = 11 THEN 'M'
+    WHEN PessoasID = 12 THEN 'M'
+    WHEN PessoasID = 13 THEN 'M'
+    WHEN PessoasID = 14 THEN 'M'
+    WHEN PessoasID = 15 THEN 'F'
+    WHEN PessoasID = 16 THEN 'F'
+    WHEN PessoasID = 17 THEN 'F'
+    WHEN PessoasID = 18 THEN 'F'
+    WHEN PessoasID = 19 THEN 'F'
+    WHEN PessoasID = 20 THEN 'F'
+    WHEN PessoasID = 21 THEN 'F'
+    WHEN PessoasID = 22 THEN 'M'
+    WHEN PessoasID = 23 THEN 'M'
+    WHEN PessoasID = 24 THEN 'F'
+    WHEN PessoasID = 25 THEN 'F'
+    WHEN PessoasID = 26 THEN 'M'
+    WHEN PessoasID = 27 THEN 'M'
+    WHEN PessoasID = 28 THEN 'M'
+    WHEN PessoasID = 29 THEN 'M'
+    WHEN PessoasID = 30 THEN 'F'
+    WHEN PessoasID = 31 THEN 'M'
+    WHEN PessoasID = 32 THEN 'F'
+END;
+
+   SELECT AVG(Idade) FROM `Pessoas` WHERE SEXO = 'F'
+16.8421
+
+   SELECT AVG(Idade) FROM `Pessoas` WHERE SEXO = 'M'
+16.9231
+
+   SELECT SUM(Idade) FROM `Pessoas` WHERE SEXO = 'F'
+320
+
+   SELECT SUM(Idade) FROM `Pessoas` WHERE SEXO = 'M'
+
+220
+
+

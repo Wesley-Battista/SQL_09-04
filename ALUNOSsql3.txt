@@ -1,0 +1,52 @@
+SELECT MAX(Idade) 
+FROM Pessoas 
+WHERE PrimeiroNome LIKE '%c%' 
+AND SEXO = 'M' 
+AND PrimeiroNome NOT IN ('Wesley');
+
+17
+
+SELECT MIN(Idade) 
+FROM Pessoas 
+WHERE PrimeiroNome LIKE '%f%' 
+AND SEXO = 'F' 
+
+NULL
+
+SELECT MAX(Idade) 
+FROM Pessoas 
+WHERE PrimeiroNome LIKE '%g%' 
+AND SEXO = 'F' 
+
+17
+
+SELECT MIN(Idade) 
+FROM Pessoas 
+WHERE PrimeiroNome LIKE '%r%' 
+AND SEXO = 'M'
+AND PrimeiroNome NOT IN ('Wesley')
+
+16
+
+SELECT (SELECT MIN(Idade) FROM Pessoas WHERE PrimeiroNome NOT LIKE 'Wesley') +
+       (SELECT MAX(Idade) FROM Pessoas WHERE PrimeiroNome NOT LIKE 'Wesley') AS Soma_Min_Max_Idade;
+
+34
+
+SELECT * FROM `Pessoas` WHERE PrimeiroNome LIKE '%a%' AND SEXO = 'F'
+
+2 	Annely 	Leticia 	Carrero 	Santa Maria da Serra 	16 	SP 	NULL 	F
+3 	Gabriela 	Boarati 	Macedo 	Florianópolis 	16 	SC 	NULL 	F
+4 	Heloisa 	Oliveira 	Nunes 	Palmas 	17 	TO 	NULL 	F
+5 	Isabella 	Maria 	Patricio 	Areal 	17 	RJ 	NULL 	F
+15 	Daiana 	Ferreira 	Santos 	Florianópolis 	18 	SC 	NULL 	F
+16 	Isabella 	Bertolo 	Santos 	Palmas 	17 	TO 	NULL 	F
+17 	Geovana 	Ferreira 	Vieira 	Areal 	16 	RJ 	NULL 	F
+18 	Geovanna 	Silva 	Nacimento 	Londrina 	17 	PR 	NULL 	F
+19 	Caroline 	Camargo 	Silva 	Belo Horizonte 	16 	MG 	SIM 	F
+20 	Isadora 	Silva 	Souza 	Santa Maria da Serra 	17 	SP 	NULL 	F
+21 	Livia 	Macedo 	Oliveira 	Florianópolis 	17 	SC 	NULL 	F
+24 	Isabella 	Almeida 	Santos 	Londrina 	17 	PR 	NULL 	F
+25 	Pietra 	Alberganti 	Basso 	Belo Horizonte 	16 	MG 	NULL 	F
+30 	Adrielly 		Inocêncio 	Londrina 	17 	PR 	SIM 	F
+32 	Alice 		Campos 	Santa Maria da Serra 	17 	SP 	NULL 	F

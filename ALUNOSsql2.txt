@@ -1,0 +1,17 @@
+SELECT AVG(Idade) FROM `Pessoas` WHERE SEXO = 'M' AND PrimeiroNome LIKE '%b%'
+ 17.0000
+
+SELECT SUM(Idade) FROM `Pessoas` WHERE SEXO = 'F' AND PrimeiroNome LIKE '%s%'; 
+ 85
+
+SELECT AVG(Idade) FROM `Pessoas` WHERE SEXO = 'F' AND PrimeiroNome LIKE 'I%'; 
+ 17.0000
+
+SELECT AVG(Idade) FROM `Pessoas` WHERE SEXO = 'M' AND PrimeiroNome LIKE 'G%'; 
+ 17.0000
+
+SELECT SUM(Idade) FROM `Pessoas` WHERE SEXO = 'F' AND PrimeiroNome LIKE '%a%'; 
+ 234
+
+SELECT SUM(Idade) FROM `Pessoas` WHERE SEXO = 'M' AND PrimeiroNome LIKE '%f%';
+ NULL 
